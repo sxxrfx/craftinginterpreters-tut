@@ -52,7 +52,6 @@ class Interpreter implements Expr.Visitor<Object> {
 
         return object.toString();
     }
-
     private void checkNumberOperand(Token operator, Object operand) {
         if (operand instanceof Double) return;
         throw new RuntimeError(operator, "Operand must be a number.");
