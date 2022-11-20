@@ -114,7 +114,7 @@ class Scanner {
         }
     }
     private void string() {
-        while (peek() != ' ' && !isAtEnd()) {
+        while (peek() != '"' && !isAtEnd()) {
             if (peek() == '\n')
                 line++;
             advance();
@@ -124,6 +124,9 @@ class Scanner {
             Lox.error(line, "Unterminated string.");
             return;
         }
+
+        // closing "
+        advance();
 
         String value = source.substring(start + 1, current - 1);
         addToken(STRING, value);

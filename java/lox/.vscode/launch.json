@@ -16,6 +16,7 @@
             "name": "Launch GenerateAst",
             "request": "launch",
             "mainClass": "com.craftinginterpreters.tool.GenerateAst",
+            "args": " ${cwd}/com/craftinginterpreters/lox",
             "projectName": "lox_396a0e7b"
         },
         {
