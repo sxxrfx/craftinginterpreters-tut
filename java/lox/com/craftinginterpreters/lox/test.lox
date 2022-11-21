@@ -1,3 +1,4 @@
-print "Hello, World!";
-print 1 + 2; 
-print true;
+var a = 6;
+var b = 7;
+print a/b;
+
