@@ -1,5 +1,7 @@
 package com.craftinginterpreters.lox;
 
+import com.craftinginterpreters.lox.Expr.Logical;
+
 class AstPrinter implements Expr.Visitor<String> {
     String print(Expr expr) {
         return expr.accept(this);
@@ -62,5 +64,11 @@ class AstPrinter implements Expr.Visitor<String> {
                     new Expr.Literal(45.67)
                 ));
         System.out.println(new AstPrinter().print(expression));
+    }
+
+    @Override
+    public String visitLogicalExpr(Logical expr) {
+        // TODO Auto-generated method stub
+        return null;
     }
 }
